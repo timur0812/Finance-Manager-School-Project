@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="mainBorderPane" prefHeight="768.0" prefWidth="1024.0" styleClass="border-pane" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="timur.popov.financemanager.controller.MainWindowController">
+    <left>
+        <VBox fx:id="leftSidebar" prefWidth="240.0" styleClass="left-sidebar" BorderPane.alignment="TOP_LEFT">
+            <children>
+                <HBox>
+                    <padding>
+                        <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                    </padding>
+                    <children>
+                        <ComboBox fx:id="userSwitcherComboBox" prefHeight="40.0" prefWidth="180.0" promptText="Select User" HBox.hgrow="ALWAYS" />
+                    </children>
+                </HBox>
+                <Separator styleClass="sidebar-separator" />
+
+                <VBox spacing="5.0">
+                    <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                    </padding>
+                    <children>
+                        <Button fx:id="dashboardButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#SwitchSectionOnMainWindow" styleClass="sidebar-button" text="Dashboard" />
+                        <Button fx:id="transactionsButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#SwitchSectionOnMainWindow" styleClass="sidebar-button" text="Transactions" />
+                        <Button fx:id="accountsButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#SwitchSectionOnMainWindow" styleClass="sidebar-button" text="Accounts" />
+                        <Button fx:id="categoriesButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#SwitchSectionOnMainWindow" styleClass="sidebar-button" text="Categories" />
+                    </children>
+                </VBox>
+
+                <Separator styleClass="sidebar-separator" />
+
+                <VBox spacing="10.0">
+                    <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                    </padding>
+                    <children>
+                        <Label text="Quick Actions" styleClass="quick-actions-label" />
+                        <Button fx:id="addIncomeButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleAddIncome" styleClass="quick-action-button" text="Add Income" />
+                        <Button fx:id="addExpenseButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleAddExpense" styleClass="quick-action-button" text="Add Expense"  />
+                    </children>
+                </VBox>
+
+                <Region VBox.vgrow="ALWAYS" />
+
+                <VBox spacing="5.0">
+                    <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="10.0" />
+                    </padding>
+                    <children>
+                        <Separator styleClass="sidebar-separator" />
+                        <Button fx:id="manageUsersButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleManageUsers" styleClass="sidebar-button" text="Manage Users" />
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </left>
+    <!--Tabs will be imported here from different files-->
+    <center>
+        <fx:include fx:id="contentArea" source="dashboard.fxml" />
+    </center>
+</BorderPane>

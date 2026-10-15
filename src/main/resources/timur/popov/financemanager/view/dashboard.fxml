@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="728.0" prefWidth="824.0" spacing="20.0" style="-fx-background-color: #f7f7f7;" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="timur.popov.financemanager.controller.tabs.DashboardController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <Label text="Dashboard" textFill="#333333">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <HBox alignment="CENTER" spacing="25.0">
+            <children>
+                <VBox alignment="CENTER" prefHeight="140.0" prefWidth="240.0" style="-fx-background-color: #e6ffe6; -fx-background-radius: 15; -fx-border-color: #d0edd0; -fx-border-radius: 15; -fx-border-width: 1;">
+                    <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                    </padding>
+                    <children>
+                        <Label text="Total Monthly Income" textAlignment="CENTER" textFill="#4CAF50">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="totalIncomeLabel" text="\$3,200.00" textFill="#2E7D32">
+                            <font>
+                                <Font name="System Bold" size="28.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+
+                <VBox alignment="CENTER" prefHeight="140.0" prefWidth="240.0" style="-fx-background-color: #ffe6e6; -fx-background-radius: 15; -fx-border-color: #edd0d0; -fx-border-radius: 15; -fx-border-width: 1;">
+                    <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                    </padding>
+                    <children>
+                        <Label text="Total Monthly Expenses" textAlignment="CENTER" textFill="#F44336">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="totalExpenseLabel" text="\$1,850.50" textFill="#C62828">
+                            <font>
+                                <Font name="System Bold" size="28.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+
+            </children>
+            <VBox.margin>
+                <Insets bottom="10.0" />
+            </VBox.margin>
+        </HBox>
+
+        <Separator prefHeight="1.0" prefWidth="200.0" style="-fx-background-color: #cccccc;">
+            <VBox.margin>
+                <Insets left="20.0" right="20.0" />
+            </VBox.margin>
+        </Separator>
+
+        <Label text="Recent Transactions" textFill="#333333">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+            <VBox.margin>
+                <Insets left="20.0" top="10.0" />
+            </VBox.margin>
+        </Label>
+
+        <fx:include fx:id="recentTransactionsTable"
+                    source="transactionsTable.fxml"
+                    VBox.vgrow="ALWAYS"
+                    mouseTransparent="true"
+                    focusTraversable="false">
+
+        </fx:include>
+    </children>
+</VBox>

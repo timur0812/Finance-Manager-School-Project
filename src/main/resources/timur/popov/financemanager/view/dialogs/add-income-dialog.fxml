@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<DialogPane fx:id="addIncomeDialogPane" headerText="Add New Income Transaction" prefWidth="400.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="timur.popov.financemanager.controller.dialogs.QuickActionController">
+    <content>
+        <VBox spacing="15.0">
+            <children>
+                <VBox spacing="5.0">
+                    <Label text="Account" />
+                    <ComboBox fx:id="accountComboBox" maxWidth="1.7976931348623157E308" promptText="Select Account" styleClass="combo-box" />
+                </VBox>
+
+                <VBox spacing="5.0">
+                    <Label text="Amount ($)" />
+                    <TextField fx:id="amountField" promptText="e.g., 500.00" styleClass="text-field" />
+                </VBox>
+
+                <VBox spacing="5.0">
+                    <Label text="Source/Category" />
+                    <ComboBox fx:id="categoryComboBox" maxWidth="1.7976931348623157E308" promptText="Select income source" styleClass="combo-box" />
+                </VBox>
+
+                <VBox spacing="5.0">
+                    <Label text="Description (Optional)" />
+                    <TextArea fx:id="descriptionArea" prefHeight="80.0" promptText="e.g., Monthly Salary, Freelance Payment" styleClass="text-area" />
+                </VBox>
+
+            </children>
+            <padding>
+                <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+            </padding>
+        </VBox>
+    </content>
+
+    <buttonTypes>
+        <ButtonType fx:id="applyButton" fx:constant="APPLY" />
+        <ButtonType fx:id="closeButton" fx:constant="CLOSE" />
+    </buttonTypes>
+</DialogPane>

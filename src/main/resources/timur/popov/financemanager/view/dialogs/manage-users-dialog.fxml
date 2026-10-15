@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<DialogPane fx:id="manageUsersDialogPane"
+			headerText="Manage Users"
+			prefWidth="560.0"
+			xmlns="http://javafx.com/javafx/20.0.2"
+			xmlns:fx="http://javafx.com/fxml/1"
+			fx:controller="timur.popov.financemanager.controller.dialogs.ManageUsersController">
+	<content>
+		<VBox spacing="15.0">
+			<padding>
+				<Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+			</padding>
+			<children>
+				<Label text="Users" />
+				<ListView fx:id="usersListView" prefHeight="320.0" VBox.vgrow="ALWAYS">
+					<placeholder>
+						<Label text="No users found." />
+					</placeholder>
+				</ListView>
+				<HBox alignment="CENTER_RIGHT" spacing="10.0">
+					<children>
+						<Region HBox.hgrow="ALWAYS" />
+						<Button fx:id="addUserButton"
+								mnemonicParsing="false"
+								onAction="#openAddUserDialog"
+								text="Add User"
+								styleClass="quick-action-button" />
+					</children>
+				</HBox>
+			</children>
+		</VBox>
+	</content>
+
+	<buttonTypes>
+		<ButtonType fx:id="closeButton" fx:constant="CLOSE" />
+	</buttonTypes>
+</DialogPane>
+

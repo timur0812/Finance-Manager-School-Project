@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<DialogPane fx:id="registerDialogPane" headerText="New User Registration" prefWidth="350.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="timur.popov.financemanager.controller.dialogs.UserRegistrationController">
+    <content>
+        <VBox spacing="15.0">
+            <children>
+                <VBox spacing="5.0">
+                    <Label text="Name" />
+                    <TextField fx:id="nameField" promptText="Enter name" styleClass="text-field" maxWidth="1.7976931348623157E308" />
+                </VBox>
+
+                <VBox spacing="5.0">
+                    <Label text="Password" />
+                    <PasswordField fx:id="passwordField" promptText="Enter password" styleClass="text-field" maxWidth="1.7976931348623157E308" />
+                </VBox>
+            </children>
+            <padding>
+                <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+            </padding>
+        </VBox>
+    </content>
+
+    <buttonTypes>
+        <ButtonType fx:id="applyButton" fx:constant="APPLY" />
+        <ButtonType fx:id="closeButton" fx:constant="CLOSE" />
+    </buttonTypes>
+</DialogPane>

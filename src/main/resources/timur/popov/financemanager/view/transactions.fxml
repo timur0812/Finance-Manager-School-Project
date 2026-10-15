@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="728.0" prefWidth="824.0" spacing="20.0" style="-fx-background-color: #f7f7f7;" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="timur.popov.financemanager.controller.tabs.TransactionsController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <Label text="Transactions Overview" textFill="#333333">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <VBox spacing="15.0">
+            <children>
+                <HBox alignment="BOTTOM_LEFT" spacing="15.0">
+                    <children>
+                        <VBox spacing="5.0">
+                            <children>
+                                <Label text="Type" textFill="#555555" />
+                                <ComboBox fx:id="typeFilterComboBox" prefWidth="150.0" promptText="Type" />
+                            </children>
+                        </VBox>
+
+                        <VBox spacing="5.0">
+                            <children>
+                                <Label text="Filters" textFill="#555555" />
+                                <HBox spacing="5.0">
+                                    <children>
+                                        <ComboBox fx:id="userFilterComboBox" prefWidth="110.0" promptText="User" />
+                                        <ComboBox fx:id="accountFilterComboBox" prefWidth="110.0" promptText="Account" />
+                                        <ComboBox fx:id="categoryFilterComboBox" prefWidth="130.0" promptText="Category" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+
+                        <VBox spacing="5.0">
+                            <children>
+                                <Label text="Date Range" textFill="#555555" />
+                                <HBox spacing="5.0">
+                                    <children>
+                                        <DatePicker fx:id="dateFromPicker" prefWidth="130.0" promptText="From" />
+                                        <DatePicker fx:id="dateToPicker" prefWidth="130.0" promptText="To" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+
+                        <VBox spacing="5.0">
+                            <children>
+                                <Label text="Amount Range" textFill="#555555" />
+                                <HBox spacing="5.0">
+                                    <children>
+                                        <Spinner fx:id="amountFromSpinner" prefWidth="140.0" promptText="From" />
+                                        <Spinner fx:id="amountToSpinner" prefWidth="140.0" promptText="To" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+
+                <VBox spacing="5.0">
+                    <children>
+                        <Label text="Search by Description" textFill="#555555" />
+                        <HBox spacing="10.0" alignment="CENTER_LEFT">
+                            <children>
+                                <TextField fx:id="searchTransactionsField"
+                                           prefHeight="35.0"
+                                           prefWidth="600.0"
+                                           HBox.hgrow="ALWAYS"
+                                           promptText="Search transactions by description" />
+
+                                <Button fx:id="searchButton"
+                                        mnemonicParsing="false"
+                                        prefHeight="35.0"
+                                        prefWidth="100.0"
+                                        style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-font-weight: bold;"
+                                        text="Search"/>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+
+        <fx:include fx:id="transactionsTable"
+                    source="transactionsTable.fxml"
+                    VBox.vgrow="ALWAYS">
+
+        </fx:include>
+    </children>
+</VBox>

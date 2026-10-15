@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<DialogPane prefWidth="420.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="timur.popov.financemanager.controller.dialogs.CreatingAccountController" headerText="Create New Account">
+    <content>
+        <VBox spacing="12.0">
+            <children>
+                <VBox spacing="5.0">
+                    <Label text="Type" />
+                    <ComboBox fx:id="typeComboBox" maxWidth="1.7976931348623157E308" promptText="Select account type" styleClass="combo-box" />
+                </VBox>
+
+                <VBox spacing="5.0">
+                    <Label text="Account Name" />
+                    <TextField fx:id="accountNameField" promptText="Enter account name" styleClass="text-field" />
+                </VBox>
+
+                <VBox spacing="5.0">
+                    <Label text="Users (select one or more)" />
+                    <ListView fx:id="usersListView" prefHeight="170.0" />
+                </VBox>
+            </children>
+            <padding>
+                <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+            </padding>
+        </VBox>
+    </content>
+
+    <buttonTypes>
+        <ButtonType fx:constant="APPLY" />
+        <ButtonType fx:constant="CLOSE" />
+    </buttonTypes>
+</DialogPane>
+

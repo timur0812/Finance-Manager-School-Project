@@ -1,0 +1,83 @@
+/*Global Styles*/
+.root {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 13px;
+    -fx-background-color: #f7f7f7;
+}
+
+/* Main Window (BorderPane and Sidebar) */
+.border-pane {
+    -fx-background-color: #f7f7f7;
+}
+
+.left-sidebar {
+    -fx-background-color: #3f4a3e;
+    -fx-padding: 10px 0;
+}
+
+.app-title-container {
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 0 20px;
+    -fx-min-height: 60px;
+}
+
+.app-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.sidebar-separator {
+    -fx-background-color: #556654;
+    -fx-min-height: 1px;
+    -fx-max-height: 1px;
+}
+
+.sidebar-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #e0e0e0;
+    -fx-font-size: 15px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 8px 15px;
+    -fx-background-radius: 5px;
+    -fx-pref-height: 35px;
+    -fx-cursor: hand;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: #556654;
+    -fx-text-fill: white;
+}
+
+.sidebar-button:focused,
+.sidebar-button.active {
+    -fx-background-color: #6a8069;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.quick-actions-label {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #a0a0a0;
+}
+
+.quick-action-button,
+.login-button {
+    -fx-background-color: #28a745;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.quick-action-button:hover,
+.login-button:hover {
+    -fx-background-color: #218838;
+}
+
+.quick-action-button {
+    -fx-font-size: 13px;
+    -fx-background-radius: 8px;
+    -fx-padding: 8px 12px;
+    -fx-alignment: CENTER_LEFT;
+}

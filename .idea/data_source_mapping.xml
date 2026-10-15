@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourcePerFileMappings">
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/9c2b43c6-44dd-463a-b531-e861bb7a8af0/console.sql" value="9c2b43c6-44dd-463a-b531-e861bb7a8af0" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/timur/popov/financemanager/sql/creating_tables.sql" value="9c2b43c6-44dd-463a-b531-e861bb7a8af0" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/timur/popov/financemanager/sql/data_sample.sql" value="9c2b43c6-44dd-463a-b531-e861bb7a8af0" />
+  </component>
+</project>
